@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+if [ ! -d "~/bin/" ]; then
+    # If the "~/bin" folder doesn't exist, we create it
+    mkdir -p ~/bin
+fi
+
 cp ./react-gen ~/bin/react-gen
 chmod ugo+x ~/bin/react-gen
-export PATH=$PATH:~/bin/react-gen
+export PATH=$PATH:~/bin/
+
