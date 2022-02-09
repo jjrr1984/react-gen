@@ -1,3 +1,27 @@
 #!/bin/bash
 
+create_project_folder(){
+    mkdir $1
+    cd $1
+}
+
+create_folders(){
+    mkdir ./src
+    mkdir ./public
+}
+
+create_git_ignore(){
+    touch ".gitignore"
+    printf "node_modules" > ./gitignore
+}
+
+create_readme(){
+    touch "README.md"
+    printf "# $1" > ./README.md
+}
+
 #   Main thread
+create_project_folder $1
+create_folders
+create_git_ignore
+create_readme $1
