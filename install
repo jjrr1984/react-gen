@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp ./react-gen ~/bin/react-gen
+chmod ugo+x ~/bin/react-gen
+export PATH=$PATH:~/bin/react-gen
